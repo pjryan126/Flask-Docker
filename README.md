@@ -20,8 +20,8 @@ What things you need to install the software and how to install them:
 1. Download the repository.
 
     ```
-    git clone {this repo}
-    cd {this repo}
+    git clone https://github.com/pjryan126/flask-docker.git
+    cd flask-docker
     ```
 
 1. Change the environment variables in the .env file.
