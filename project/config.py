@@ -6,16 +6,10 @@ BASEDIR = os.path.abspath(os.path.dirname(__file__))
 
 class BaseConfig:
 
-    CLIENT_URL = 'localhost:4200'
     # Debug/Test Flags
     DEBUG = False
     TESTING = False
     DEBUG_TB_ENABLED = True
-
-    # Custom Security Settings
-    ADMIN_USERNAME = os.environ.get('ADMIN_USERNAME')
-    ADMIN_PASSWORD = os.environ.get('ADMIN_PASSWORD')
-    SECRET_KEY = os.environ.get('SECRET_KEY')
 
     # Cross-Origin Settings
     CORS_HEADERS = 'Content-Type'
@@ -25,17 +19,8 @@ class BaseConfig:
     LOGGING_LOCATION = 'web.log'
     LOGGING_LEVEL = logging.DEBUG
 
-    # Mail Settings
-    FLASK_MAIL_SUBJECT_PREFIX = '[DO NOT REPLY]'
-    FLASK_MAIL_SENDER = 'Do Not Reply <do-not-reply@stoneturn.com>'
-    MAIL_SERVER = 'smtp.gmail.com'
-    MAIL_PORT = 465
-    MAIL_USE_SSL = True
-    MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
-    MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
-
     # SQLAlchemy Settings
-    SQLALCHEMY_DATABASE_URI = os.environ.get('SQLALCHEMY_DATABASE_URI')
+    SQLALCHEMY_DATABASE_URI = os.environ.get('SQLALCHEMY_DATABASE_URI', 'sqlite:///db.sqlite')
     SQLALCHEMY_COMMIT_ON_TEARDOWN = True
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     SQLALCHEMY_RECORD_QUERIES = True
