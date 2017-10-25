@@ -30,7 +30,7 @@ What things you need to install the software and how to install them:
     - NETWORK = name of preexisting Traefik reverse proxy server (for production)
     - PORT = port on which the Flask application will run
 
-1. Run the container.
+1. Run the container.  
 
     ```
     docker-compose -f docker-compose.dev.yml up -d
@@ -38,11 +38,11 @@ What things you need to install the software and how to install them:
 
 ## Deployment
 The production version is configured for use with a Traefik reverse-proxy server.
-To deploy the container and application in a production environment, use the docker-compose.prod.yml file.
+To deploy the container and application in a production environment, use the docker-compose.prod.yml file.  
 
-    ```
-    docker-compose up -d
-    ```
+```
+docker-compose up -d
+```
 
 ## Built With
 
