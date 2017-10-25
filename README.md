@@ -41,7 +41,7 @@ The production version is configured for use with a Traefik reverse-proxy server
 To deploy the container and application in a production environment, use the docker-compose.prod.yml file.
 
     ```
-    docker-compose -f docker-compose.prod.yml up -d
+    docker-compose up -d
     ```
 
 ## Built With
